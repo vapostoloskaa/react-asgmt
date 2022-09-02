@@ -1,5 +1,5 @@
 import gql from "graphql-tag";
-export const GET_SPACE_MISSION = gql
+export const GET_SPACE_MISSION = gql`
 
 query GetSpaceMission($limit: Int!){
     launchesPast($limit: $limit){
@@ -14,4 +14,4 @@ query GetSpaceMission($limit: Int!){
            image 
         }
     }
-}
+}`;
