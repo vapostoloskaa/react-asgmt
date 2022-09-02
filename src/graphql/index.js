@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache} from "@apollo/client";
 import { GET_SPACE_MISSION } from "./queries";
 export const apolloClient = new ApolloClient({
-    uri: "https://api.spacex.land/graphql/" ,
+    uri: "https://api.spacexdata.com/v5/launches" ,
     cache: new InMemoryCache()
 });
 
