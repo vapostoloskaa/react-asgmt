@@ -40,7 +40,13 @@ function App() {
             ? item.ships[0].image
             : "https://www.universetoday.com/wp-content/uploads/2022/08/26694_1-PIA25219-web-580x423.jpg"
              } 
+             position="top"
+             alt={item.mission_name}
              />
+             <MDBCardBody>
+                <MDBCardTitle>{item.mission_name}</MDBCardTitle>
+                <MDBCardText>{item.launch_site.site_name_long}</MDBCardText>
+             </MDBCardBody>
         </MDBCard>
         </>
       ))}
