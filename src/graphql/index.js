@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache} from "@apollo/client";
 import { GET_SPACE_MISSION } from "./queries";
 export const apolloClient = new ApolloClient({
-    uri: "https://api.spacexdata.com/v5/launches" ,
+    uri: "https://api.spacex.land/graphql/" ,
     cache: new InMemoryCache()
 });
 
@@ -13,9 +13,9 @@ class SpaceService{
                 variables: {limit}
             });
             if(!response || !response.data) throw new Error("Cannot get rocket launches list!")
-            return response.data.launchePast
-        } catch(err){
-            throw err;
+            return response.data.launchesPast
+        } catch(error){
+            throw error;
         }
     }
 }
